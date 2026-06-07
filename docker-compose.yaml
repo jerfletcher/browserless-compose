@@ -9,6 +9,9 @@ services:
       MAX_CONCURRENT: 4
       MAX_WAIT_TIME: 60000
       TIMEOUT: 120000
+    coolify:
+      domains:
+        - "https://browse-lan.0mod.com"
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 30s
