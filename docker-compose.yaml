@@ -3,11 +3,12 @@ services:
     image: ghcr.io/browserless/chromium:v2.23.0
     restart: unless-stopped
     environment:
-      TOKEN: "browsetoken2026"
+      TOKEN: browsetoken2026
       MAX_CONCURRENT: 4
       MAX_WAIT_TIME: 60000
       TIMEOUT: 120000
-    coolify:
-      domains:
-        - "https://browse-lan.0mod.com"
-      targetPort: 3000
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.browserless.rule=Host(`browse-lan.0mod.com`)"
+      - "traefik.http.routers.browserless.entrypoints=https"
+      - "traefik.http.services.browserless.loadbalancer.server.port=3000"
