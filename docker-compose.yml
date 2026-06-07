@@ -1,0 +1,9 @@
+version: '3'
+services:
+  browserless:
+    image: 'ghcr.io/browserless/chromium:v2.23.0'
+    restart: unless-stopped
+    environment:
+      - TOKEN=fb200300c5a8baf660dad09e86de1a96
+      - MAX_CONCURRENT=10
+      - CONCURRENT_FREE=5
