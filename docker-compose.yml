@@ -1,7 +1,6 @@
-version: '3'
 services:
   browserless:
-    image: ghcr.io/browserless/chromium:latest
+    image: ghcr.io/browserless/chromium:v2.23.0
     restart: unless-stopped
     environment:
       TOKEN: "browsetoken2026"
