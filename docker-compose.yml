@@ -1,7 +1,7 @@
 version: '3'
 services:
   browserless:
-    image: 'ghcr.io/browserless/chromium:v2.23.0'
+    image: 'ghcr.io/browserless/chromium:latest'
     restart: unless-stopped
     environment:
       - TOKEN=***      - MAX_CONCURRENT=10
