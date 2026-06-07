@@ -10,7 +10,7 @@ services:
       MAX_WAIT_TIME: 60000
       TIMEOUT: 120000
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:3000/status"]
+      test: ["CMD", "curl", "-f", "http://localhost:3000/health"]
       interval: 30s
       timeout: 10s
       retries: 3
