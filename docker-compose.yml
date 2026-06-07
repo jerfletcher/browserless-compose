@@ -3,7 +3,9 @@ services:
   browserless:
     image: 'ghcr.io/browserless/chromium:v2.23.0'
     restart: unless-stopped
+    ports:
+      - '3000:3000'
     environment:
-      - TOKEN=fb200300c5a8baf660dad09e86de1a96
+      - TOKEN=${TOKEN}
       - MAX_CONCURRENT=10
       - CONCURRENT_FREE=5
